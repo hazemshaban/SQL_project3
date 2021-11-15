@@ -11,6 +11,7 @@ VALUES (null, 'alex-bay', 'balaza',4);
 -- it can not refrence to a row that is not inserted yet
 
 -- question(3)
+-- unchecking Enable foreign key checks box
 -- insert first row in the department and the employee tables before making 'mgr_ssn'and 'dno' foreign key
 -- or 
 -- making one of them alow null first then enter the first row then update it and make it not null
