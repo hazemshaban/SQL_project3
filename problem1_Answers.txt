@@ -1,0 +1,16 @@
+-- question(1)
+DELETE FROM employee WHERE ssn=5;
+--#1451 - Cannot delete or update a parent row: a foreign key constraint fails (`company`.`department`, CONSTRAINT `department_ibfk_1` FOREIGN KEY (`mgr_ssn`) REFERENCES `employee` (`ssn`))
+-- it can not detele it because it is a foreign key to department table and there is row that refrences to it 
+
+
+-- question(2)
+INSERT INTO project 
+VALUES (null, 'alex-bay', 'balaza',4);
+-- #1452 - Cannot add or update a child row: a foreign key constraint fails (`company`.`project`, CONSTRAINT `project_ibfk_1` FOREIGN KEY (`dno`) REFERENCES `department` (`Dnumber`))
+-- it can not refrence to a row that is not inserted yet
+
+-- question(3)
+-- insert first row in the department and the employee tables before making 'mgr_ssn'and 'dno' foreign key
+-- or 
+-- making one of them alow null first then enter the first row then update it and make it not null
